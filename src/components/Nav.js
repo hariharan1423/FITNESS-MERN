@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Nav = () => {
   return (
     <div className="nav">
@@ -5,19 +7,29 @@ const Nav = () => {
       <div className="list">
         <ul>
           <li>
-            <button href="home.html">HOME</button>
+            <NavLink to="/" className="Nav-link">
+              HOME
+            </NavLink>
           </li>
           <li>
-            <button href="blog.html">FITNESS BLOG</button>
+            <NavLink to="Blog" className="Nav-link">
+              FITNESS BLOG
+            </NavLink>
           </li>
           <li>
-            <button href="work.html">WORKOUT PLANS</button>
+            <NavLink to="Workout" className="Nav-link">
+              WORKOUT PLANS
+            </NavLink>
           </li>
           <li>
-            <button href="diet.html">DIET</button>
+            <NavLink to="Diet" className="Nav-link">
+              DIET
+            </NavLink>
           </li>
           <li>
-            <button href="about.html">ABOUT</button>
+            <NavLink to="About" className="Nav-link">
+              ABOUT
+            </NavLink>
           </li>
         </ul>
       </div>

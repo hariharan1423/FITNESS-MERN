@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&family=Work+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+/* BORDERSSSSSS*/
+.leftBottom {
+  width: 900px;
+  z-index: 0;
+  position: relative;
+  bottom: 20px;
+  border-left: 5px solid antiquewhite;
+  border-bottom: 5px solid antiquewhite;
+  border-bottom-left-radius: 30px;
+  height: 250px;
+}
+.topRight {
+  width: 400px;
+  position: relative;
+  left: 20%;
+  border-top: 5px solid antiquewhite;
+  border-right: 5px solid antiquewhite;
+  height: 300px;
+  border-top-right-radius: 30px;
+}
+.rightBottom {
+  width: 800px;
+  border-bottom: 5px solid antiquewhite;
+  border-right: 5px solid antiquewhite;
+  height: 200px;
+  border-bottom-right-radius: 30px;
+  z-index: 1.5;
+}
+.topLeft {
+  width: 400px;
+  position: relative;
+  top: 20px;
+  right: 20%;
+  border-top: 5px solid antiquewhite;
+  border-left: 5px solid antiquewhite;
+  height: 300px;
+  border-top-left-radius: 30px;
+}
+/*********/
+.descrp {
+  margin-top: 10px;
+  margin-left: 100px;
+  padding-top: 70px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: antiquewhite;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.one {
+  z-index: 1;
+}
+.one a {
+  display: flex;
+  width: 80%;
+  margin-top: 60px;
+  margin-left: 60px;
+  text-decoration: none;
+  color: antiquewhite;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: rgb(245, 172, 76);
+  border: 5px solid black;
+  border-radius: 10px;
+  -webkit-box-shadow: -0px 0px 5px 20px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -0px 0px 5px 20px rgba(255, 255, 255, 1);
+  box-shadow: -0px 0px 10px 20px rgba(255, 255, 255, 1);
+}
+.one a p {
+  color: black;
+  background-color: rgb(245, 172, 76);
+}
+.one a p h1 {
+  color: black;
+  background-color: rgb(245, 172, 76);
+}
+.two {
+  margin-left: 5%;
+  z-index: 2;
+}
+.two a {
+  display: flex;
+  width: 90%;
+  background-color: rgb(245, 172, 76);
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  text-decoration: none;
+  -webkit-box-shadow: -0px 0px 5px 20px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -0px 0px 5px 20px rgba(255, 255, 255, 1);
+  box-shadow: -0px 0px 10px 20px rgba(255, 255, 255, 1);
+}
+.two a p {
+  margin-top: 120px;
+  margin-left: 40px;
+  color: black;
+  background-color: rgb(245, 172, 76);
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.two a p h1 {
+  background-color: rgb(245, 172, 76);
+}
+.two a img {
+  order: 2;
+}
+
+.three {
+  z-index: 4;
+}
+
+.three a {
+  display: flex;
+  width: 95%;
+  text-decoration: none;
+  color: antiquewhite;
+  justify-items: center;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: rgb(245, 172, 76);
+  border: 5px solid black;
+  border-radius: 10px;
+  -webkit-box-shadow: -0px 0px 5px 20px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -0px 0px 5px 20px rgba(255, 255, 255, 1);
+  box-shadow: -0px 0px 10px 20px rgba(255, 255, 255, 1);
+}
+
+.three a p {
+  color: black;
+  background-color: rgb(245, 172, 76);
+}
+.three a p h1 {
+  color: black;
+  background-color: rgb(245, 172, 76);
+}
+.fit {
+  aspect-ratio: 3 / 4;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: -26px 0;
+  margin: 100px;
+  border-radius: 20px;
+}
+.work {
+  aspect-ratio: 3 / 4;
+  width: 300px;
+  height: 330px;
+  object-fit: cover;
+  object-position: -170px 0;
+  margin: 80px;
+  border-radius: 30px;
+}
+.diet {
+  aspect-ratio: 3 / 4;
+  width: 300px;
+  height: 330px;
+  object-fit: cover;
+  margin: 100px;
+  border-radius: 30px;
+}
+.footer {
+  display: flex;
+  width: 100vw;
+  height: 200px;
+  align-items: center;
+  border-top: 3px solid white;
+}
+.footlogo {
+  position: relative;
+  left: 5%;
+  top: 50px;
+  color: antiquewhite;
+  font-family: "Moon Dance", cursive;
+  font-weight: 900;
+  font-size: 40px;
+}
+.info {
+  position: relative;
+  left: 29%;
+  top: 5%;
+}
+.info h3 {
+  color: antiquewhite;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 1000;
+  font-size: 30px;
+  text-align: center;
+}
+.info ol {
+  display: flex;
+}
+.info ol li {
+  list-style: none;
+  margin: 10px;
+}
+.info button {
+  border: none;
+  letter-spacing: 2px;
+  color: antiquewhite;
+  font-family: "Work Sans", sans-serif;
+}
+
+.info button:hover {
+  color: rgb(0, 255, 255);
+}
+.contact {
+  position: relative;
+  left: 53%;
+}
+.contact p:nth-child(1) {
+  margin-top: 40px;
+  color: antiquewhite;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.contact p:nth-child(3) {
+  color: antiquewhite;
+  margin-top: 20px;
+}
+
+.contact p:nth-child(3) button {
+  color: antiquewhite;
+}
+.contact ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  list-style: none;
+  color: antiquewhite;
+}
+.contact button {
+  border: none;
+}
+.fa {
+  font-size: 40px;
+  border: none;
+  padding: 2px;
+  transition: background-color 2s opacity 2s;
+}
+.fa:hover {
+  background-color: white;
+  color: black;
+  opacity: 0.5;
+}
+.fa-facebook {
+  border-radius: 5px;
+  color: antiquewhite;
+}
+
+.fa-twitter {
+  border-radius: 5px;
+  color: antiquewhite;
+}
+.fa-instagram {
+  border-radius: 10px;
+  color: antiquewhite;
+}
+
+.copyright {
+  position: relative;
+  bottom: 10%;
+  color: antiquewhite;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.descrp2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: antiquewhite;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.descrp2 h1 {
+  margin: 70px 0px;
+}
+/*rgb(245, 172, 76)*/
+.Diet-link {
+  color: black;
+  font-family: "Moon Dance", cursive;
+  font-weight: 500;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--orange);
+  text-decoration: none;
+  font-size: 40px;
+}

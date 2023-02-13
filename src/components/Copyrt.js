@@ -1,8 +1,8 @@
 const Copyrt = () => {
   return (
-      <div className="copyright">
-        <p>Copyright &copy; Gym bro!</p>
-      </div>
+    <div className="copyright">
+      <p>Copyright &copy; Gym bro!</p>
+    </div>
   );
 };
 
