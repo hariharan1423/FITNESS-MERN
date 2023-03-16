@@ -1,11 +1,9 @@
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footlogo">
+      <div className="text-3xl font-bold font-moonDance ml-8 first-letter:text-6xl">
         <p>
           Gym Bro!
-          <br />
-          <br />
         </p>
       </div>
       <div className="info">
@@ -28,6 +26,7 @@ const Footer = () => {
             <button href="#">Report Issues</button>
           </li>
         </ol>
+        <p className="text-center relative top-10">Copyright &copy; Gym bro.</p>
       </div>
       <div className="contact">
         <p align="center">Contant Us</p>

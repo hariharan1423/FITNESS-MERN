@@ -1,37 +1,8 @@
 import React, { useState } from "react";
-
-// class Bmi extends React.Component{
-//     constructor(){
-//       super();
-//       this.state ={
-//         height : '',
-//         weight :'',
-//         result:'',
-//         total :''
-//       }
-//     }
-//     handleheight =(event) =>{
-//       this.setState({
-//         height:event.target.value
-//       })
-//     }
-//     handleweight = (event) =>{
-//       this.setState({
-//         weight:event.target.value
-//       })
-//     }
-
-//     execute =(event) =>{
-//       this.setState({
-//       total : Math.round((parseInt(this.state.weight)/Math.pow((parseInt(this.state.height))/100,2))*100)/100 + "Kg/m2",
-//       });
-//       event.preventDefault();
-//     }
-const Bmi = () => {
-  const [weight, setWeight] = useState(null);
+const Bmi = ({ level, setLevel, weight, setWeight }) => {
   const [height, setHeight] = useState(null);
   const [bmi, setBmi] = useState(null);
-  const [level, setLevel] = useState("");
+  const[text,setText] = useState("");
   const onSetHeight = (e) => {
     const value = e.target.value;
     setHeight(value);
@@ -45,39 +16,44 @@ const Bmi = () => {
     // WEIGHT IN KG/HEIGHT IN METRE**2;
     const result = Math.round((weight / Math.pow(height / 100, 2)) * 100) / 100;
     setBmi(result);
-    let bmiLevel = "";
+    let bmiLevel,Suggest = "";
     if (isNaN(result)) {
-      alert("Please fill the form");
+      alert("Please fill the form properly!");
     } else if (result < 18.5) {
       bmiLevel = "Underweight";
+      Suggest ="To get free weight-gain diet-plans,Please follow the steps accordingly & fill the form below!!"
     } else if (result > 18.5 && result < 24.9) {
       bmiLevel = "NORMAL";
+      Suggest ="To get free diet-plans for maintaining the current-weight,Please follow the steps accordingly & fill the form below!!"
     } else if (result > 25.0 && result < 29.9) {
       bmiLevel = "OVERWEIGHT";
+      Suggest ="To get free weight-loss diet-plans,Please follow the steps accordingly & fill the form below!!"
     } else if (result >= 30.0) {
       bmiLevel = "OBESE";
+      Suggest ="To get free weight-loss diet-plans,Please follow the steps accordingly & fill the form below!!"
     }
+    setText(Suggest);
     setLevel(bmiLevel);
-    e.preventDefault();
+    e.preventDefault()
   };
-
+  
   return (
-    <div className="bmi">
-      <p>BMI CALCULATOR</p>
+  <div className="rounded-lg flex flex-col items-center mt-24 mr-24 ml-24 p-8 border-4 border-black">
+      <p className="text-2xl mb-10">BMI CALCULATOR.</p>
       <form>
-        <span className="metric">&ensp;ENTER YOUR HEIGHT:</span>
+        <span className="metric">ENTER YOUR HEIGHT:</span>
         <input
-          id="height"
+          className="border-2 border-black rounded p-1 focus:outline-none bg-transparent"
           value={height}
           onChange={onSetHeight}
           placeholder="Height in cm"
-          required
+          required 
         />
         <br />
         <br />
-        <span className="metric">&nbsp;ENTER YOUR WEIGHT:</span>
+        <span className="metric">ENTER YOUR WEIGHT:</span>
         <input
-          id="weight"
+          className="bg-transparent border-2 border-black rounded p-1 focus:outline-none"
           value={weight}
           onChange={onSetWeight}
           placeholder="Weight in kg"
@@ -89,9 +65,10 @@ const Bmi = () => {
           SUBMIT
         </button>
       </form>
-      <div className="answer">
+      <div className="flex flex-col items-center">
         <div id="result">Your Current Bmi - {bmi}Kg/m2</div>
         <div className="weightLevel">Weight Level - {level}</div>
+        <div className="weightLevel">Suggestions -{text}</div>
       </div>
     </div>
   );
